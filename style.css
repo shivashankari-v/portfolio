@@ -108,6 +108,22 @@ nav ul li a:hover {
     text-decoration:none;
     transition:0.3s;
 }
+.project-btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 20px;
+  background:#5c7cfa;
+  color:white;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:14px;
+  transition:0.3s;
+}
+
+.project-btn:hover{
+  background:#364fc7;
+  transform:scale(1.05);
+}
 
 .resume-btn:hover{
     background:#3b5bdb;
