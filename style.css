@@ -66,6 +66,7 @@ nav ul li a:hover {
   align-items: center;
   justify-content: space-between;
   padding: 120px 80px;
+  gap: 40px;   /* add spacing */
 }
 
 .hero-left h1 {
@@ -88,11 +89,39 @@ nav ul li a:hover {
 }
 
 .hero-right img {
-  width: 280px;
-  border-radius: 50%;
-  box-shadow: 0 0 30px rgba(0, 255, 213, 0.4);
+  width: 420px;
+  max-width: 100%;
+  border-radius: 20px;   /* remove circle */
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(0 20px 40px rgba(0, 255, 213, 0.25));
+  transition: transform 0.4s ease;
+   animation: float 4s ease-in-out infinite;
+}
+.resume-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#5c7cfa;
+    color:white;
+    font-size:16px;
+    border-radius:8px;
+    text-decoration:none;
+    transition:0.3s;
 }
 
+.resume-btn:hover{
+    background:#3b5bdb;
+    transform:scale(1.05);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+.hero-right img:hover {
+  transform: scale(1.05);
+}
 /* =====================
    GLASS SECTIONS
 ===================== */
