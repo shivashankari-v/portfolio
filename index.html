@@ -39,7 +39,7 @@
       I design and build meaningful digital experiences with
       modern UI and real-world applications.
     </p>
-</a>
+<br>
 <a href="resume/resume.pdf" class="resume-btn" target="_blank">
 View Resume
 </a>
@@ -49,43 +49,79 @@ View Resume
     <img src="assest/img.png" alt="Profile Image">
   </div>
 </section>
-   <!-- About -->
-  <section class="glass reveal" id="about">
+  <section class="about-section reveal" id="about">
 
-    <h1>About Me</h1>
-    <br>
-    <p>
-     Second-year Computer Science Engineering student at R.M.K. College of Engineering and Technology, 
-     <br>
+  <div class="about-container">
 
-     possessing a solid understanding of full-stack development, UI/UX design, and artificial intelligence.
-     <br>
+    <!-- LEFT SIDE -->
+    <div class="about-text">
+            <h1 class="section-subtitle">About <span>Me</span></h1>
 
-     Interested in developing real-world solutions through modern UI design and intelligent systems while
-     <br>
+      <p>
+        I’m a second-year Computer Science Engineering student at RMK College of Engineering and Technology with a strong interest in frontend development and UI/UX design.
+      </p>
+      <p>
+        I enjoy building clean, responsive user interfaces and creating meaningful user experiences. My projects include an event management platform and a peer learning system.
+      </p>
+      <p>
+        I’ve completed certifications in Java and web development and worked as a UI/UX intern at Novitech, focusing on Figma design and usability improvements.
+      </p>
 
-     ensuring responsive and user-centered applications.
-    </p>
-  </section>
+      <p>
+        I’m currently looking for opportunities to grow as a developer and contribute to real-world applications.
+      </p>
+    </div>
+
+    <!-- RIGHT SIDE (CARDS) -->
+    <div class="about-cards">
+
+  <div class="about-card">
+    <h2>6+</h2>
+    <p>Projects</p>
+  </div>
+
+  <div class="about-card">
+    <h2>1</h2>
+    <p>Internship</p>
+  </div>
+
+  <div class="about-card">
+    <h2>Frontend</h2>
+    <p>Core Skill</p>
+  </div>
+
+  <div class="about-card">
+    <h2>Figma</h2>
+    <p>UI/UX Tool</p>
+  </div>
+
+</div>
+
+      
+    </div>
+
+  </div>
+
+</section>
 <br>
 <section class="glass reveal" id="Education">
     <h1>Education</h1>
     <br>
 
    <div class="edu-card">
-    <h3>B.E – Computer Science & Engineering</h3>
-    <span>R.M.K. College of Engineering and Technology (2024–2028)</span>
-    <p>DBMS, Data Structures, Software Development, Intro to AI</p>
+    <h3 class="edu-content">B.E – Computer Science & Engineering</h3>
+    <span class="edu-content">R.M.K. College of Engineering and Technology (2024–2028)</span>
+    <p class="edu-content">DBMS, Data Structures, Software Development, Intro to AI</p>
   </div>
-
+<br>
   <div class="edu-card">
-    <h3>Higher Secondary (Class XII)</h3>
-    <span>R.M.K. Senior Secondary School – 2023</span>
+    <h3 class="edu-content">Higher Secondary (Class XII)</h3>
+    <span class="edu-content">R.M.K. Senior Secondary School – 2023</span>
   </div>
-
+<br>
   <div class="edu-card">
-    <h3>Secondary (Class X)</h3>
-    <span>Vivekananda Vidyalaya – 2021</span>
+    <h3 class="edu-content">Secondary (Class X)</h3>
+    <span class="edu-content">Vivekananda Vidyalaya – 2021</span>
   </div>
   </section>
   <br>
@@ -104,159 +140,209 @@ View Resume
     </div>
   </section>
 <br>
- <section class="glass reveal popup-section panel" id="projects">
+ <section class="glass reveal" id="projects">
+  <h1>Projects</h1>
+  
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="card-image">
+        <img src="assest/meditation.png" alt="Meditation App">
+      </div>
+      <div class="card-content">
+        <h2>Learning App</h2>
+        <p class="subtitle">UI/UX Design – Figma</p>
+        <p class="short-desc">A calm, accessible mobile interface for guided mindfulness.</p>
+        
+        <div class="card-buttons">
+          <a href="https://www.figma.com/make/dGD9EeWTaIWT4992lzwxTo/Meditation-and-Learning-App?fullscreen=1&t=RyfK5z2QjOPD2WP7-1" target="_blank" class="btn-github">Figma</a>
+          <button class="btn-details" onclick="openPopup('meditation')">Details About the project</button>
+        </div>
+      </div>
+    </div>
+    <div id="projectModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2><span id="modalIcon">♿</span> <span id="modalTitle">Project Title</span></h2>
+      <button class="close-btn" onclick="closeModal()">&times; Close</button>
+    </div>
+    
+    <div class="modal-body">
+      <p id="modalDesc">Project description goes here...</p>
+      
+      <h3 class="section-title">KEY COMPONENTS USED</h3>
+      <ul id="modalComponents" class="component-list">
+        </ul>
 
-<h1>Projects</h1>
-<br>
-
-<!-- Project 1 -->
-<div class="content-left popup-left">
-  <h2>Treaty Beauty Makers – Event Management Platform</h2>
-  <p class="desc">
-    Developed a web-based platform for event planning and booking services.
-  </p>
-
-  <ul>
-    <li>Implemented rating, pricing, and scheduling features.</li>
-    <li>Designed responsive UI for artist showcase and bookings.</li>
-    <li>Technologies used: HTML, CSS, JavaScript, React.</li>
-  </ul>
+      <h3 class="section-title">SOFTWARE & LANGUAGES</h3>
+      <div id="modalTags" class="tag-container">
+        </div>
+    </div>
+  </div>
 </div>
-
-
-<br><br>
-
-<!-- Project 2 -->
-<div class="content-left popup-left">
-  <h2>Skill Swap – Academic Support Platform</h2>
-
-  <p class="desc">
-    Skill Swap is a collaborative learning platform where students
-    learn from fellow students by sharing academic knowledge,
-    project guidance, and skill-based learning resources.
-  </p>
-
-  <ul>
-    <li>Designed curriculum-based instructional learning modules.</li>
-    <li>Created engaging learning content for students.</li>
-    <li>Supported peer learning through project work and assessments.</li>
-  </ul>
-
+    <div class="project-card">
+      <div class="card-image">
+        <img src="assest/tech-titans.png" alt="Tech Titans">
+      </div>
+      <div class="card-content">
+        <h2>Tech Titans – Coding Platform</h2>
+        <p class="subtitle">UI/UX Design – Figma</p>
+        <p class="short-desc">Gaming-inspired platform focused on teamwork and performance.</p>
+        
+        <div class="card-buttons">
+          <a href="https://www.figma.com/make/c6Com7lIdu06bWGwvqz9QY/Gaming-app-with-gamification?p=f&t=5vZsBeRrEtIqWenX-0&fullscreen=1" target="_blank" class="btn-github">Figma</a>
+          <button class="btn-details" onclick="openPopup('techTitans')">Details About the project </button>
+        </div>
+      </div>
+    </div>
+<div class="project-card">
+  <div class="card-image">
+    <img src="assest/path detector.png" alt="Autonomous Path Detector">
+  </div>
+  <div class="card-content">
+    <h2>Project Expo – Intercollege Competition</h2>
+    <p class="subtitle">Autonomous Path Detector</p>
+    <p class="short-desc">Award-winning robotics project demonstrating innovation in autonomous navigation.</p>
+    
+    <div class="card-buttons">
+      <button class="btn-details" onclick="openPopup('projectExpo')">Details</button>
+    </div>
+  </div>
 </div>
-
-
-<br><br>
-
-<!-- Project Expo -->
-<div class="content-left popup-left">
-  <h2>PROJECT EXPO – Intercollege Competition</h2>
-
-  <ul>
-    <li>Developed and presented an academic technical project.</li>
-    <li>Won prizes for innovation and presentation skills.</li>
-    <li>Demonstrated teamwork, problem-solving, and technical knowledge.</li>
-  </ul>
-
-</div>
-,<div class="content-left popup-left">
-  <h2>Meditation & Learning App</h2>
-  <p class="subtitle">UI/UX Design – Figma</p>
-
-  <p class="desc">
-    <li>Designed a meditation and learning mobile application UI using Figma.</li>
-    <li>Focused on calm user experience, accessibility, and clean interface.</li>
-    for guided meditation and learning sessions.
-  </p>
-
-  <a href="https://www.figma.com/make/dGD9EeWTaIWT4992lzwxTo/Meditation-and-Learning-App?fullscreen=1&t=RyfK5z2QjOPD2WP7-1"
-     target="_blank"
-     class="project-btn">
-     View UI Design
-  </a>
-</div>
-<div class="content-left popup-left">
-  <h2>Tech Titans – Coding Platform</h2>
-  <p class="subtitle">UI/UX Design – Figma</p>
-
-  <ul class="desc">
-    <li>Designed a gaming-inspired coding platform UI using Figma.</li>
-    <li>Focused on teamwork features, performance tracking, and engaging learning experience.</li>
-    <li>Created a modern dark theme interface for developers and coding enthusiasts.</li>
-  </ul>
-
-  <a href="https://www.figma.com/design/AENNeB9Kpjqw0cES1nSfD1/TechTitans?node-id=0-1&t=cOedmTJdo4KWgDlk-1"
-     target="_blank"
-     class="project-btn">
-     View UI Design
-  </a>
-</div>
-<div class="content-left popup-left">
-  <h2>Happy Pet – Pet Care Website</h2>
-  <p class="subtitle">UI/UX Design – Figma</p>
-
-  <p class="desc">
-    <li>Designed a user-friendly pet care and adoption website UI using Figma.</li>
-    <li>Focused on clean layout, easy navigation, and engaging visuals.</li>
-    <li>Created sections for pet adoption, pet care tips, and pet services.</li>
-  </p>
-
-  <a href="https://www.figma.com/design/OYrQuDcfkUfsTqxG3PzUoZ/Untitled?node-id=0-1&t=k0ZVuOacacupO7pp-1"
-     target="_blank"
-     class="project-btn">
-     View UI Design
-  </a>
-</div>
+    </div>
 </section>
 <section class="glass reveal" id="internship">
 
 <h1>Internship Experience</h1>
 <br>
 
-<div class="edu-card">
-  <h3>UI/UX Design Intern – Novitech</h3>
-  <span>June 2025 – July 2025</span>
-
-  <ul>
-    <li>Designed user-friendly interfaces using Figma.</li>
-    <li>Improved user experience through usability testing.</li>
-    <li>Collaborated with developers and designers to enhance UI.</li>
-  </ul>
-
+<div class="cert-card">
+  <div class="incert-img-box" style="max-width: 350px;">
+    <img src="assest/certificate-intern.png" alt="Novitech UI/UX Internship Certificate">
+  </div>
+  <div class="cert-info">
+    <div class="ach-badge">Internship</div>
+    <h3>UI/UX Design Intern – Novitech</h3>
+    <p class="date-range">June 2025 – July 2025</p>
+    <ul class="cert-desc" style="list-style: none; padding: 0;">
+      <li style="margin-bottom: 5px;">• Designed user-friendly interfaces using Figma.</li>
+      <li style="margin-bottom: 5px;">• Improved user experience through usability testing.</li>
+      <li style="margin-bottom: 5px;">• Collaborated with developers to enhance UI components.</li>
+    </ul>
+  </div>
 </div>
 
 </section>
 <section class="glass reveal" id="certifications">
-
-<h1>Certifications</h1>
-<br>
-
-<ul>
-  <li>NPTEL – Java Programming (Sep 2025)</li>
-  <li>NPTEL – Data Science (Jul 2025)</li>
-  <li>Infosys Springboard – Responsive Web Design (Feb 2026)</li>
-  <li>Infosys Springboard – HTML, CSS, JavaScript, C++</li>
-</ul>
-
+  <h1>Certifications</h1>
+  
+  <div class="cert-grid">
+    <div class="cert-card">
+      <div class="cert-info">
+        <h3>NPTEL – Java Programming</h3>
+        <p class="subtitle">Completed: Jul-Oct 2025 (12 Week course)</p>
+        <p class="cert-desc">Advanced concepts in Java, including OOPs and multithreading.</p>
+      </div>
+    </div>
+    <div class="cert-card">
+      <div class="cert-info">
+        <h3>NPTEL – Python for Data Science </h3>
+        <p class="subtitle">Completed: Jan-Feb 2025 (4 Week course)</p>
+        <p class="cert-desc">Advanced concepts in Python for data analysis and visualization.</p>
+      </div>
+    </div>
+    <div class="cert-card">
+      
+      <div class="cert-info">
+        <h3>Infosys Springboard </h3>
+        <p class="cert-desc">Web development</p>
+        <p class="cert-desc">Basics of Python</p>
+        <p class="cert-desc">Data Science</p>
+        
+      </div>
+    </div>
+       
+    </div>
 </section>
 <section class="glass reveal" id="achievements">
-
-<h1>Achievements</h1>
-<br>
-
-<ul>
-  <li>1st Place – Artificial Intelligence Domain</li>
-  <li>Awarded for outstanding performance and knowledge in Artificial Intelligence.</li>
-  <li>Won prizes in intercollege competitions for innovation and presentation.</li>
-</ul>
-
+  <h1>Achievements</h1>
+  
+  <div class="achievements-grid">
+    <div class="achievement-card">
+      <div class="ach-img-box">
+        <img src="assest/project expo.png" alt="Project Expo Winner">
+      </div>
+      <div class="ach-info">
+        <div class="ach-badge">Winner</div>
+        <h3>Project Expo – Intercollege Competition</h3>
+        <p class="ach-date">Awarded: 2025</p>
+        <p class="ach-desc">Won 1st prize for the "Autonomous Path detector" among 50+ competing teams.</p>
+      </div>
+    </div>
+    <div class="achievement-card">
+  <div class="ach-img-box">
+    <img src="assest/ECO club.jpg" alt="ECO Club Award">
+  </div>
+  <div class="ach-info">
+    <div class="ach-badge">I Prize</div>
+    <h3>Display Contest</h3>
+    <p class="ach-date">Academic Year 2024-2025</p>
+    <p class="ach-desc">Won first prize for the Display contest conducted by the ECO Club at R.M.K. College of Engineering and Technology with the cash prize of 1000/-.</p>
+  </div>
+</div>
+<div class="achievement-card">
+  <div class="ach-img-box">
+    <img src="assest/Language club.jpg" alt="Language Club Award">
+  </div>
+  <div class="ach-info">
+    <div class="ach-badge">I Prize</div>
+    <h3>Film or Book Review Contest</h3>
+    <p class="ach-date">Academic Year 2024-2025</p>
+    <p class="ach-desc">Secured first place in the review contest conducted by the Language Club, demonstrating strong analytical and communication skills with the cash prize of 1000/-.</p>
+  </div>
+</div>
+<div class="achievement-card">
+  <div class="ach-img-box">
+    <img src="assest/Astronomy club.jpg" alt="Astronomy Club Award">
+  </div>
+  <div class="ach-info">
+    <div class="ach-badge">III Prize</div>
+    <h3>Astro-Presentation Contest</h3>
+    <p class="ach-date">Academic Year 2024-2025</p>
+    <p class="ach-desc">Awarded by the Astronomy Club of R.M.K. College of Engineering and Technology for excellence in astronomical presentation with the cash prize of 500/-.</p>
+  </div>
+</div>
+   
+  </div>
 </section>
 <section class="glass reveal" id="contact">
-  <h1>Contact</h1>
-  <p>Email: 24632.cs@rmkcet.ac.in</p><br>
-  <p>LinkedIn: www.linkedin.com/in/shiva-shankari-v-36314a326</p><br>
-   <p >City: Chennai</p><br>
-  <p>State: Tamil Nadu</p> 
-  <p>Address: RMK CHOLA Gardens Sundaracholapuram Thiruverkadu</p>
+  <h1>Get In Touch</h1>
+  
+  <div class="contact-container">
+    <div class="contact-info">
+      <div class="info-item">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <h3>Email</h3>
+          <p>24632.cs@rmkcet.ac.in</p>
+        </div>
+      </div>
+      
+      <div class="info-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <div>
+          <h3>Location</h3>
+          <p>Tamil Nadu, India</p>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/shiva-shankari-v-36314a326" target="_blank">LinkedIn</a>
+        <a href="https://github.com/shivashankari-v" target="_blank">GitHub</a>
+      </div>
+    </div>
+
+    
+  </div>
 </section>
 
 <script src="script.js"></script>
