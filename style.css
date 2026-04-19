@@ -16,6 +16,137 @@ body {
 }
 
 /* =====================
+   certificate
+===================== */
+/* Grid Layout */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* The Card */
+.cert-card {
+  background: rgba(255, 255, 255, 0.05); /* Matching your glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  border-color: #00ffd5;
+}
+/* =====================
+   Acheivements
+===================== */
+/* Grid Setup */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* Card Style */
+.achievement-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-8px);
+  border-color: #00ffd5;
+  box-shadow: 0 10px 20px rgba(0, 255, 213, 0.1);
+}
+
+/* Image box at the top */
+.ach-img-box {
+  width: 100%;
+  height: 160px;
+  background: #000;
+  overflow: hidden;
+}
+
+.ach-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Change to 'contain' if it's a full certificate */
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.achievement-card:hover .ach-img-box img {
+  opacity: 1;
+}
+
+/* Info section below image */
+.ach-info {
+  padding: 20px;
+  text-align: left;
+}
+
+/* Achievement Badge (Winner/Elite/etc) */
+.ach-badge {
+  display: inline-block;
+  background: rgba(0, 255, 213, 0.1);
+  color: #00ffd5;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.ach-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.ach-date {
+  font-size: 0.8rem;
+  color: #b3fef2;
+  margin-bottom: 10px;
+}
+
+.ach-desc {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+
+/* Text details below */
+.cert-info {
+  padding: 15px;
+  text-align: left;
+}
+
+.cert-info h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.cert-info .subtitle {
+  color: #00ffd5;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.cert-desc {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+/* =====================
    NAVBAR
 ===================== */
 header {
@@ -98,36 +229,21 @@ nav ul li a:hover {
    animation: float 4s ease-in-out infinite;
 }
 .resume-btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:#5c7cfa;
-    color:white;
-    font-size:16px;
-    border-radius:8px;
-    text-decoration:none;
-    transition:0.3s;
-}
-.project-btn{
-  display:inline-block;
-  margin-top:15px;
-  padding:10px 20px;
-  background:#5c7cfa;
-  color:white;
-  border-radius:8px;
-  text-decoration:none;
-  font-size:14px;
-  transition:0.3s;
+    text-decoration: none;
+  color: #00ffd5;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border: 1px solid #00ffd5;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: 0.3s;
 }
 
-.project-btn:hover{
-  background:#364fc7;
-  transform:scale(1.05);
-}
+
 
 .resume-btn:hover{
-    background:#3b5bdb;
-    transform:scale(1.05);
+    background: #00ffd5;
+  color: #0b1120
 }
 
 @keyframes float {
@@ -138,9 +254,87 @@ nav ul li a:hover {
 .hero-right img:hover {
   transform: scale(1.05);
 }
+/* ABOUT SECTION */
+.about-section {
+  padding: 80px 10%;
+}
+
+.about-container {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LEFT TEXT */
+.about-text {
+  flex: 1;
+}
+
+.section-subtitle {
+  color: #00ffd5;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.about-text h1 {
+  font-size: 42px;
+  margin: 10px 0;
+}
+
+.about-text span {
+  color: #47d4e7;
+}
+
+.about-text p {
+  margin: 15px 0;
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+
+/* RIGHT CARDS */
+.about-cards {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.about-card {
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.about-card h2 {
+  font-size: 32px;
+  color: #70d6e2;
+}
+
+.about-card p {
+  margin-top: 10px;
+  color: #aaa;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 /* =====================
    GLASS SECTIONS
 ===================== */
+
 .glass {
   margin: 60px auto;
   width: 85%;
@@ -160,13 +354,23 @@ nav ul li a:hover {
    EDUCATION CARDS
 ===================== */
 .edu-card {
-  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden; /* Clips image to border radius */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.edu-content {
   padding: 20px;
-  border-left: 4px solid #00ffd5;
-  background: rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
+  text-align: left;
 }
 
+.edu-content h2 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
 .edu-card h3 {
   color: #ffffff;
 }
@@ -176,6 +380,33 @@ nav ul li a:hover {
   color: #c7fef4;
 }
 
+
+/* The Date (June 2025 – July 2025) */
+.date-range {
+  font-size: 0.85rem;
+  color: #b3fef2;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+/* =====================
+   INTERNSHIP DETAILS`
+===================== */
+.incert-img-box {
+  width: 100%;
+  height: 180px; /* This limits the vertical space strictly */
+  background: #000; /* Black bars on the sides if the image is very wide */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.incert-img-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Keeps the whole certificate visible & uncropped */
+  padding: 10px; /* Prevents the certificate edges from touching the box */
+}
 /* =====================
    SKILLS
 ===================== */
@@ -199,32 +430,164 @@ nav ul li a:hover {
   transform: scale(1.1);
 }
 
-/* =====================
-   PROJECTS
-===================== */
-.popup-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
+/* Container for the whole section */
+.projects-section {
+  padding: 60px 20px;
+  text-align: center;
 }
 
-.popup-img {
+/* Modal Background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
   width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 0 25px rgba(0, 255, 213, 0.4);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85); /* Darken background */
+  backdrop-filter: blur(5px);
+  align-items: center;
+  justify-content: center;
 }
 
-.subtitle {
-  color: #b3fef2;
-  margin-top: 5px;
+/* Modal Box */
+.modal-content {
+  background: #0b1120;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 90%;
+  max-width: 600px;
+  border-radius: 20px;
+  padding: 30px;
+  color: #fff;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
-.desc {
-  margin-top: 10px;
-  line-height: 1.6;
+
+.close-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
+.section-title {
+  color: #00ffd5;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin: 25px 0 15px 0;
+  text-transform: uppercase;
+}
+
+/* Component List Styling */
+.component-list {
+  list-style: none;
+  padding: 0;
+}
+
+.component-list li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.component-list li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: #00ffd5;
+  font-weight: bold;
+}
+
+/* Tag Pills */
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag {
+  background: rgba(88, 52, 235, 0.2);
+  border: 1px solid #5834eb;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #d1c4ff;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Individual Card Styling */
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden; /* Clips image to border radius */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 255, 213, 0.2);
+}
+
+.card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Ensures image fills space without stretching */
+}
+
+.card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.card-content h2 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.short-desc {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin: 15px 0;
+}
+
+/* Button Grouping */
+.card-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.btn-github, .btn-details {
+  padding: 8px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-style: oblique;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: 1px solid rgba(13, 248, 209, 0.688);
+  background-color: rgba(13, 248, 209, 0.688);
+  color: #00ffd5;
+  transition: 0.3s;
+}
+
+.btn-github:hover, .btn-details:hover {
+  background: #00ffd5;
+  color: #0b1120;
+}
 /* =====================
    CERTIFICATES SECTION
 ===================== */
@@ -257,8 +620,62 @@ nav ul li a:hover {
 /* =====================
    CONTACT
 ===================== */
-#contact p {
-  line-height: 1.6;
+.contact-container {
+  display: flex;
+  gap: 50px;
+  margin-top: 40px;
+  flex-wrap: wrap; /* Important for mobile responsiveness */
+}
+
+/* Left Side Info */
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+  text-align: left;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.info-item i {
+  color: #00ffd5;
+  font-size: 1.5rem;
+}
+
+.info-item h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.info-item p {
+  color: #ccc;
+  margin: 2px 0 0 0;
+}
+
+.social-links {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #00ffd5;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border: 1px solid #00ffd5;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: #00ffd5;
+  color: #0b1120;
 }
 
 /* =====================
@@ -297,6 +714,7 @@ nav ul li a:hover {
   .popup-section {
     grid-template-columns: 1fr;
   }
+
 
   header {
     padding: 15px 25px;
