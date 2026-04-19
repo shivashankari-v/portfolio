@@ -86,6 +86,94 @@ fetch("http://localhost:5000/api/data")
 // =====================
 // 4️⃣ Scroll Reveal Animation
 // =====================
+function openModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
+
+window.onclick = function(event) {
+  const modals = document.querySelectorAll(".modal");
+  modals.forEach(modal => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+};
+// Data object to store details for each project
+const projectData = {
+  meditation: {
+    title: "1Code Mind App",
+    icon: "🧘",
+    desc: "An assistive application UI designed to promote mindfulness and focus on coding for students.",
+    components: [
+      "Figma - Primary design tool",
+      "Auto Layout - For responsive components",
+      "Color Theory - Calm palette selection",
+      "Prototyping - Interactive user flows"
+    ],
+    tags: ["UI/UX", "Web Design", "Figma", "Accessibility"]
+  },
+  projectExpo: {
+    title: "Autonomous Path Detector",
+    icon: "🤖",
+    desc: "A technical project presented at the Intercollege Project Expo. This autonomous system uses sensor fusion to detect and follow specific paths while avoiding obstacles in real-time.",
+    components: [
+      "Arduino Uno - Central processing unit",
+      "Ultrasonic Sensors - For real-time obstacle detection",
+      "IR Sensor Array - For precise path tracking",
+      "L298N Motor Driver - Controls high-torque DC motors",
+      "Chassis - Custom-built aerodynamic frame"
+    ],
+    tags: ["Robotics", "Arduino", "Embedded C", "Hardware"]
+  },
+  techTitans: {
+    title: "Tech Titans Platform",
+    icon: "💻",
+    desc: "A gaming-inspired coding platform designed for competitive learning and teamwork.",
+    components: [
+      "Dark Mode UI - Reduced eye strain",
+      "Dashboard - Performance tracking metrics",
+      "Leaderboard - Social competition features"
+    ],
+    tags: ["Product Design", "Figma", "Gamification"]
+  }
+};
+
+function openPopup(projectId) {
+  const data = projectData[projectId];
+  const modal = document.getElementById('projectModal');
+
+  // Fill the modal with data
+  document.getElementById('modalTitle').innerText = data.title;
+  document.getElementById('modalIcon').innerText = data.icon;
+  document.getElementById('modalDesc').innerText = data.desc;
+
+  // Fill components list
+  const compList = document.getElementById('modalComponents');
+  compList.innerHTML = data.components.map(item => `<li>${item}</li>`).join('');
+
+  // Fill tags
+  const tagContainer = document.getElementById('modalTags');
+  tagContainer.innerHTML = data.tags.map(t => `<span class="tag">${t}</span>`).join('');
+
+  // Show modal
+  modal.style.display = 'flex';
+}
+
+function closeModal() {
+  document.getElementById('projectModal').style.display = 'none';
+}
+
+// Close if user clicks outside the box
+window.onclick = function(event) {
+  const modal = document.getElementById('projectModal');
+  if (event.target == modal) {
+    closeModal();
+  }
+}
 function revealOnScroll() {
   const reveals = document.querySelectorAll(".reveal");
   
