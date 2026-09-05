@@ -132,7 +132,7 @@ function openPopup(projectId) {
   const tagContainer = document.getElementById("modalTags");
   tagContainer.innerHTML = data.tags.map(t => `<span class="tag">${t}</span>`).join("");
 
-  modal.classList.add("active");
+  modal.style.display = "flex";
   modal.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden"; // lock background scroll while modal is open
 }
@@ -140,9 +140,9 @@ function openPopup(projectId) {
 function closeModal() {
   const modal = document.getElementById("projectModal");
   if (!modal) return;
-  modal.classList.remove("active");
+  modal.style.display = "none";
   modal.setAttribute("aria-hidden", "true");
-  document.body.style.overflow = "";
+  document.body.style.overflow = ""; // restore scrolling
 }
 
 // Close when clicking the dark overlay (outside modal-content)
